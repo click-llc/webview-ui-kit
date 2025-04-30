@@ -90,10 +90,10 @@ git clone https://github.com/click-uz/webview-ui-kit.git
 cd webview-ui-kit
 npm install
 
-	•	Run Storybook: npm run storybook
-	•	Build library: npm run build
-	•	Lint & format: npm run lint / npm run format
-	•	Type check: npm run typecheck
+- Run Storybook: npm run storybook
+- Build library: npm run build
+- Lint & format: npm run lint / npm run format
+- Type check: npm run typecheck
 
 ---
 
@@ -105,8 +105,8 @@ We welcome contributions! Please follow these steps:
 
 git checkout -b feat/my-component
 
-	3.	Make your changes and add tests if applicable.
-	4.	Ensure linting and type checks pass:
+3. Make your changes and add tests if applicable.
+4. Ensure linting and type checks pass:
 
 ```bash
 npm run lint
@@ -114,8 +114,8 @@ npm run typecheck
 ```
 
 
-	5.	Commit your work and push to your fork.
-	6.	Open a pull request describing your changes.
+5. Commit your work and push to your fork.
+6. Open a pull request describing your changes.
 
 Please read our CODE_OF_CONDUCT.md before contributing.
 
