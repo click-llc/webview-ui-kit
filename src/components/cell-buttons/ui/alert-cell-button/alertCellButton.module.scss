@@ -1,0 +1,20 @@
+.positive {
+  color: var(--white);
+  background-color: var(--positive-bg);
+
+  span {
+    color: var(--white);
+  }
+}
+
+.info {
+  background-color: var(--neutral-bg);
+}
+
+.warning {
+  background-color: var(--attention-bg);
+}
+
+.error {
+  background-color: var(--negative-bg);
+}

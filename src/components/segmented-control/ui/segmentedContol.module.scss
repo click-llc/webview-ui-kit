@@ -1,0 +1,65 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.segments {
+  background: var(--island-and-input);
+  border-radius: functions.size(l);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.option {
+  @include mixins.typography('body2', 'medium');
+
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--font-secondary);
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: functions.size(s) functions.size(l);
+  position: relative;
+  transition: all 0.2s ease;
+
+  &:not(:last-child, &Active) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: -1px;
+      height: 50%;
+      width: 1px;
+      background-color: var(--stroke);
+    }
+  }
+
+  &Active {
+    background: var(--accent);
+    color: var(--default-white-color);
+    border-right-color: transparent;
+
+    & .option {
+      border-left-color: transparent;
+    }
+  }
+
+  &Disabled {
+    background-color: var(--bg-disabled);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+  }
+
+  &Icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &Label {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,8 @@
+:root {
+  --gander-border-radius: 8px;
+  --checkbox-size: 24px;
+  --rounding-border-radius: 50%;
+  --radio-btn-size: 24px;
+  --rounded-full: 10000px;
+  --cell-btn-radius: 16px;
+}

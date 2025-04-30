@@ -1,0 +1,109 @@
+{
+  "name": "webview-ui-kit",
+  "version": "0.1.0",
+  "description": "Webview UI Kit",
+  "main": "dist/webview-ui-kit.es.js",
+  "module": "dist/webview-ui-kit.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/webview-ui-kit.es.js",
+      "default": "./dist/webview-ui-kit.es.js"
+    },
+    "./styles": {
+      "import": "./dist/webview-ui-kit.css"
+    },
+    "./fonts.css": {
+      "default": "./dist/fonts.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && cp -R src/styles dist/styles && mkdir -p dist/fonts && cp -R src/fonts/*.woff2 dist/fonts/ && cp src/fonts.css dist/fonts.css",
+    "dev": "npm run storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint .",
+    "lint:fix": "eslint src --fix && npm run format",
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint \"**/*.{css,scss}\" --fix",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{css,scss}": [
+      "stylelint --fix"
+    ]
+  },
+  "dependencies": {
+    "clsx": "~2.1.1",
+    "framer-motion": "~12.9.1",
+    "react": "~19.1.0",
+    "react-dom": "~19.1.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "~3.2.6",
+    "@eslint/eslintrc": "~3.3.1",
+    "@eslint/js": "~9.25.1",
+    "@mdx-js/react": "~3.1.0",
+    "@storybook/addon-docs": "~8.6.12",
+    "@storybook/addon-essentials": "~8.6.12",
+    "@storybook/addon-interactions": "~8.6.12",
+    "@storybook/addon-links": "~8.6.12",
+    "@storybook/addon-onboarding": "~8.6.11",
+    "@storybook/blocks": "~8.6.11",
+    "@storybook/react": "~8.6.12",
+    "@storybook/react-vite": "~8.6.11",
+    "@storybook/test": "~8.6.11",
+    "@types/eslint": "~9.6.1",
+    "@types/react": "~19.1.0",
+    "@types/react-dom": "~19.1.0",
+    "@typescript-eslint/parser": "~8.29.0",
+    "@vitejs/plugin-react": "~4.3.4",
+    "autoprefixer": "~10.4.21",
+    "eslint": "~9.25.1",
+    "eslint-config-prettier": "~10.1.1",
+    "eslint-plugin-import": "~2.31.0",
+    "eslint-plugin-jsdoc": "~50.6.9",
+    "eslint-plugin-jsx-a11y": "~6.10.2",
+    "eslint-plugin-prettier": "~5.2.5",
+    "eslint-plugin-react": "~7.37.4",
+    "eslint-plugin-react-hooks": "~5.2.0",
+    "eslint-plugin-react-refresh": "~0.4.19",
+    "eslint-plugin-simple-import-sort": "~12.1.1",
+    "eslint-plugin-storybook": "~0.12.0",
+    "eslint-plugin-unused-imports": "~4.1.4",
+    "globals": "~16.0.0",
+    "husky": "~9.1.7",
+    "prettier": "~3.5.3",
+    "sass": "~1.87.0",
+    "storybook": "~8.6.12",
+    "stylelint": "~16.19.0",
+    "stylelint-config-standard-scss": "~14.0.0",
+    "stylelint-scss": "~6.11.1",
+    "ts-node": "~10.9.2",
+    "tsconfig-paths": "~4.2.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "~8.31.0",
+    "vite": "~6.3.3",
+    "vite-plugin-dts": "~4.5.3",
+    "vite-plugin-eslint2": "~5.0.3",
+    "vite-plugin-svgr": "~4.3.0"
+  },
+  "overrides": {
+    "react": "~19.1.0",
+    "react-dom": "~19.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}

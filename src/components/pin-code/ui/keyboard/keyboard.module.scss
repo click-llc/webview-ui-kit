@@ -1,0 +1,28 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.keyboard {
+  display: inline-grid;
+  gap: functions.size(s);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  &_btn {
+    @include mixins.typography('head1');
+
+    background-color: transparent;
+    border: none;
+    color: var(--font-primary);
+    cursor: pointer;
+    height: 64px;
+    outline: none;
+    padding: functions.size(s);
+    text-align: center;
+    user-select: none;
+    width: 96px;
+
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

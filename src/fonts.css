@@ -1,0 +1,71 @@
+@import 'https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap';
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Bold Italic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Light Italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A Medium Italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid Circular A SemiBold Italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}

@@ -1,0 +1,55 @@
+@import './variables.css';
+@import 'styles/theme.css';
+
+body {
+  accent-color: var(--accent);
+  background-color: var(--bg);
+  box-sizing: border-box;
+  color: var(--font-primary);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overscroll-behavior: none;
+  padding: 0;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+* {
+  user-select: none;
+  font-family: Euclid, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus,
+a:focus-visible,
+a:focus-within {
+  outline: none;
+}

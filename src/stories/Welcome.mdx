@@ -1,0 +1,86 @@
+import { Meta, Title, Subtitle } from '@storybook/blocks';
+import LinkTo from '@storybook/addon-links/react';
+
+<Meta
+  title="🏠 Welcome"
+  parameters={{
+    options: { storySort: { order: ['🏠 Welcome'] } }
+  }}
+/>
+
+<Title><img height="28" alt="logo" src="/assets/click-react-ui-kit.svg" /> Click UI Kit</Title>
+<Subtitle>WebView UI Kit – это компонентная библиотека для React-приложений. Она предоставляет набор готовых UI-компонентов, упрощающих разработку интерфейсов.</Subtitle>
+
+**Разработчики:**
+
+- [**Рустамов Ахроржон**](https://t.me/Akhrorzhon_Rustamov_Click)
+- [**Азизов Абдукудус**](https://t.me/abduquddus_azizov_click)
+- [**Курбонов Ислом**](https://t.me/Islom_Qurbonov_Click)
+- [**Мухаммадиев Оловиддин**](https://t.me/Alouddin_Mukhammadiev)
+
+## Установка
+
+Установите пакет через менеджер пакетов **npm**:
+
+```sh
+npm install webview-ui-kit
+```
+
+#### Стили
+
+Для работы библиотеки требуется импорт базовых стилей:
+
+```tsx
+import 'webview-ui-kit/fonts.css';
+import 'webview-ui-kit/styles';
+```
+
+## Компоненты по группам
+
+### Inputs & Form Controls
+- <LinkTo kind="FormControls/CheckBox" story="Docs">CheckBox</LinkTo>
+- <LinkTo kind="FormControls/Chips" story="Docs">Chips</LinkTo>
+- <LinkTo kind="FormControls/Counter" story="Docs">Counter</LinkTo>
+- <LinkTo kind="FormControls/Input" story="Docs">Input</LinkTo>
+- <LinkTo kind="FormControls/Keyboard" story="Docs">Keyboard</LinkTo>
+- <LinkTo kind="FormControls/Pins" story="Docs">Pins</LinkTo>
+- <LinkTo kind="FormControls/PinCode" story="Docs">PinCode</LinkTo>
+- <LinkTo kind="FormControls/RadioButton" story="Docs">RadioButton</LinkTo>
+- <LinkTo kind="FormControls/Switch" story="Docs">Switch</LinkTo>
+
+
+### Buttons & Actions
+
+- <LinkTo kind="Buttons_Actions/AlertCellButton" story="Docs">AlertCellButton</LinkTo>
+- <LinkTo kind="Buttons_Actions/BaseButton" story="Docs">BaseButton</LinkTo>
+- <LinkTo kind="Buttons_Actions/BaseCellButton" story="Docs">BaseCellButton</LinkTo>
+- <LinkTo kind="Buttons_Actions/CheckboxCell" story="Docs">CheckboxCell</LinkTo>
+- <LinkTo kind="Buttons_Actions/IconButton" story="Docs">IconButton</LinkTo>
+- <LinkTo kind="Buttons_Actions/PrimaryButton" story="Docs">PrimaryButton</LinkTo>
+- <LinkTo kind="Buttons_Actions/RadioCell" story="Docs">RadioCell</LinkTo>
+- <LinkTo kind="Buttons_Actions/SegmentedControl" story="Docs">SegmentedControl</LinkTo>
+
+
+### Cards
+
+- <LinkTo kind="Cards/BankCardCell" story="Docs">BankCardCell</LinkTo>
+- <LinkTo kind="Cards/MiniBankCard" story="Docs">MiniBankCard</LinkTo>
+- <LinkTo kind="Cards/MiniBankLogoCard" story="Docs">MiniBankLogoCard</LinkTo>
+
+### Data Display & Indicators
+
+- <LinkTo kind="DataDisplayIndicators/Badge" story="Docs">Badge</LinkTo>
+- <LinkTo kind="DataDisplayIndicators/Balance" story="Docs">Balance</LinkTo>
+- <LinkTo kind="DataDisplayIndicators/PercentageProgressBar" story="Docs">PercentageProgressBar</LinkTo>
+- <LinkTo kind="DataDisplayIndicators/StepProgressBar" story="Docs">StepProgressBar</LinkTo>
+
+### Navigation & Layout
+
+- <LinkTo kind="Navigation_Layout/PageControls" story="Docs">PageControls</LinkTo>
+- <LinkTo kind="Navigation_Layout/NavBar" story="Docs">NavBar</LinkTo>
+- <LinkTo kind="Navigation_Layout/NavBarWithBackActions" story="Docs">NavBarWithBackActions</LinkTo>
+
+### Notifications
+
+- <LinkTo kind="Notifications/Alert" story="Docs">Alert</LinkTo>
+- <LinkTo kind="Notifications/Toast" story="Docs">Toast</LinkTo>

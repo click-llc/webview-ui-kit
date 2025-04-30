@@ -1,0 +1,74 @@
+@use '@sass/mixins';
+
+.wrapper {
+  background-color: var(--island-and-input);
+  border-radius: var(--cell-btn-radius, 16px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 288px;
+  padding: 12px;
+  position: relative;
+  width: 358px;
+
+  .name {
+    @include mixins.typography('body2');
+
+    color: var(--font-secondary);
+    max-width: 214px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  &[disabled] {
+    cursor: unset;
+
+    .name {
+      color: var(--disabled-text);
+    }
+  }
+}
+
+.body {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  width: 100%;
+
+  .fallbackText {
+    @include mixins.typography('history', 'semibold');
+
+    color: var(--font-secondary);
+  }
+}
+
+.warning {
+  @include mixins.typography('menu');
+
+  align-items: center;
+  background-color: var(--danger);
+  border-radius: var(--gander-border-radius, 8px);
+  color: var(--white);
+  display: flex;
+  height: 24px;
+  max-width: calc(100% - 18px);
+  padding: 0 8px;
+  text-align: left;
+
+  &Text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+@use '@sass/mixins';
+
+.navbar {
+  align-items: center;
+  background-color: var(--bg);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  height: 48px;
+  padding-inline: 8px;
+
+  &IsTransparent {
+    background-color: transparent;
+  }
+}
+
+.left {
+  align-items: center;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  justify-self: start;
+  min-width: 44px;
+}
+
+.right {
+  align-items: center;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  justify-self: right;
+  min-width: 44px;
+}
+
+.center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-self: center;
+}
+
+.title {
+  @include mixins.typography('body1', 'semibold');
+
+  color: var(--font-primary);
+}
+
+.subtitle {
+  @include mixins.typography('body2');
+
+  color: var(--font-secondary);
+}

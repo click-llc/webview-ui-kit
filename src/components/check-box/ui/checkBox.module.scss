@@ -1,0 +1,58 @@
+@use '@sass/mixins';
+
+$border-radius: var(--gander-border-radius, 8px);
+$border-color: var(--font-secondary);
+$size: var(--checkbox-size, 24px);
+
+.label {
+  align-items: center;
+  column-gap: 12px;
+  cursor: pointer;
+  display: inline-flex;
+
+  &PositionRight {
+    flex-direction: row-reverse;
+  }
+}
+
+.text {
+  @include mixins.typography('body2');
+}
+
+.input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.checkbox {
+  $current: &;
+
+  place-items: center center;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  color: var(--bg);
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  height: $size;
+  justify-content: center;
+  width: $size;
+
+  &Active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  &Disabled {
+    &:not(#{$current}Active) {
+      border-color: var(--stroke);
+    }
+
+    &:is(#{$current}Active) {
+      border-color: var(--stroke);
+      background-color: var(--stroke);
+    }
+  }
+}

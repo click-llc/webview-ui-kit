@@ -1,0 +1,9 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.pinCode {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 80px;
+}

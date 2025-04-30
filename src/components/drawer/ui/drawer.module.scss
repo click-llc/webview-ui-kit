@@ -1,0 +1,60 @@
+@use '@sass/mixins';
+
+$border-radius: var(--app-border-sheet-radius, 16px);
+$background-color: var(--bg, #fff);
+$action-button-height: 22px;
+
+.wrapper {
+  inset: 0;
+  height: 100%;
+  overscroll-behavior: contain;
+  position: fixed;
+  width: 100%;
+}
+
+.backdrop {
+  @include mixins.background-blur;
+
+  inset: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.drawer {
+  background-color: $background-color;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  height: auto;
+  left: 0;
+  position: fixed;
+  width: 100%;
+
+  &InUp {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    bottom: 0;
+    padding-bottom: var(--app-bottom-indent);
+  }
+
+  &InDown {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    padding-top: var(--app-bottom-indent);
+  }
+}
+
+.actionButton {
+  align-items: center;
+  display: flex;
+  height: $action-button-height;
+  justify-content: center;
+  width: 100%;
+
+  &Dash {
+    background-color: var(--accent);
+    border-radius: 20px;
+    display: inline-block;
+    height: 5px;
+    width: 48px;
+  }
+}

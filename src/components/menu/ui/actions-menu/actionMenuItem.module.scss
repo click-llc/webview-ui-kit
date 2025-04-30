@@ -1,0 +1,42 @@
+@use '@sass/mixins';
+
+.wrapper {
+  align-items: center;
+  background-color: var(--island-and-input);
+  border-radius: var(--gander-border-radius, 8px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  gap: 6px;
+  height: 102px;
+  justify-content: center;
+  padding: 0;
+  width: 83.5px;
+}
+
+.icon {
+  align-items: center;
+  color: var(--accent);
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.label {
+  @include mixins.typography('menu');
+
+  color: var(--font-primary);
+  white-space: pre-line;
+}
+
+.disabled {
+  cursor: unset;
+
+  .icon,
+  .label {
+    color: var(--disabled-text);
+  }
+}

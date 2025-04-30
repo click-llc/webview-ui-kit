@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "module": "ES6",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components"],
+      "@styles/*": ["./src/styles"],
+      "@sass/*": ["./src/sass"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", ".storybook", ".husky", ".idea"]
+}

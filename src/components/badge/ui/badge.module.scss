@@ -1,0 +1,68 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.badge {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 3264px;
+}
+
+.primary {
+  background-color: rgb(197 210 224 / 24%);
+  color: var(--font-primary);
+}
+
+.secondary {
+  background-color: rgb(197 210 224 / 16%);
+  color: var(--font-secondary);
+}
+
+.accent {
+  background-color: rgb(0 119 255 / 16%);
+  color: var(--accent);
+}
+
+.success {
+  background-color: rgb(0 184 73 / 16%);
+  color: var(--green-success-color);
+}
+
+.attention {
+  background-color: rgb(255 136 0 / 16%);
+  color: var(--waiting-text-color);
+}
+
+.error {
+  background-color: rgb(255 68 0 / 16%);
+  color: var(--danger);
+}
+
+.large {
+  @include mixins.typography('body1', 'medium');
+
+  gap: 6px;
+  padding: functions.size(xs) functions.size(m);
+}
+
+.medium {
+  @include mixins.typography('body2', 'medium');
+
+  gap: functions.size(xs);
+  padding: functions.size(xs) functions.size(s);
+}
+
+.small {
+  @include mixins.typography('menu', 'medium');
+
+  gap: functions.size(xs);
+  padding: 2px 6px;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}

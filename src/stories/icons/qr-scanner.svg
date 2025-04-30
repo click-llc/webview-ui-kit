@@ -1,0 +1,22 @@
+<svg width="33" height="32" viewBox="0 0 33 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M28.25 2C29.3546 2 30.25 2.89543 30.25 4V5C30.25 5.55228 30.6977 6 31.25 6C31.8023 6 32.25 5.55228 32.25 5V4C32.25 1.79086 30.4591 0 28.25 0H27.25C26.6977 0 26.25 0.447715 26.25 1C26.25 1.55228 26.6977 2 27.25 2H28.25Z"
+          fill="currentColor"/>
+    <path d="M9.25 9H11.25V11H9.25V9Z" fill="currentColor"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.25 5H5.25V15H15.25V5ZM13.25 7H7.25V13H13.25V7Z"
+          fill="currentColor"/>
+    <path d="M23.25 9H21.25V11H23.25V9Z" fill="currentColor"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.25 5H17.25V15H27.25V5ZM25.25 7H19.25V13H25.25V7Z"
+          fill="currentColor"/>
+    <path d="M9.25 21H11.25V23H9.25V21Z" fill="currentColor"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 17H15.25V27H5.25V17ZM7.25 19H13.25V25H7.25V19Z"
+          fill="currentColor"/>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M25.25 17V19H23.25V17H21.25V19H19.25V17H17.25V21H21.25V23H17.25V27H19.25V25H21.25V27H27.25V21H25.25V19H27.25V17H25.25ZM23.25 21V19H21.25V21H23.25ZM23.25 21H25.25V25H21.25V23H23.25V21Z"
+          fill="currentColor"/>
+    <path d="M28.25 30C29.3546 30 30.25 29.1046 30.25 28V27C30.25 26.4477 30.6977 26 31.25 26C31.8023 26 32.25 26.4477 32.25 27V28C32.25 30.2091 30.4591 32 28.25 32H27.25C26.6977 32 26.25 31.5523 26.25 31C26.25 30.4477 26.6977 30 27.25 30H28.25Z"
+          fill="currentColor"/>
+    <path d="M2.25 28C2.25 29.1046 3.14543 30 4.25 30H5.25C5.80228 30 6.25 30.4477 6.25 31C6.25 31.5523 5.80228 32 5.25 32H4.25C2.04086 32 0.25 30.2091 0.25 28V27C0.25 26.4477 0.697715 26 1.25 26C1.80228 26 2.25 26.4477 2.25 27V28Z"
+          fill="currentColor"/>
+    <path d="M2.25 4C2.25 2.89543 3.14543 2 4.25 2H5.25C5.80228 2 6.25 1.55228 6.25 1C6.25 0.447715 5.80228 0 5.25 0H4.25C2.04086 0 0.25 1.79086 0.25 4V5C0.25 5.55228 0.697715 6 1.25 6C1.80228 6 2.25 5.55228 2.25 5V4Z"
+          fill="currentColor"/>
+</svg>

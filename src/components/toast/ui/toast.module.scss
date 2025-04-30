@@ -1,0 +1,40 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.toast {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: functions.size(l);
+  display: inline-grid;
+  flex-wrap: nowrap;
+  gap: functions.size(m);
+  grid-template-columns: 32px 1fr;
+  padding: functions.size(l);
+
+  &IsFull {
+    display: grid;
+    width: 100%;
+  }
+
+  &Icon {
+    .success & {
+      color: var(--green-success-color);
+    }
+
+    .info & {
+      color: var(--grey56);
+    }
+
+    .warning & {
+      color: var(--waiting-text-color);
+    }
+
+    .error & {
+      color: var(--danger);
+    }
+  }
+
+  &Title {
+    @include mixins.typography('body1', 'semibold');
+  }
+}

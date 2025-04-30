@@ -1,0 +1,8 @@
+.ghostButton {
+  color: var(--accent);
+  min-width: 156px;
+
+  &:disabled {
+    background-color: var(--disabled);
+  }
+}

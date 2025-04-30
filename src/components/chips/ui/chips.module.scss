@@ -1,0 +1,44 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.chip {
+  @include mixins.typography('body2');
+
+  align-items: center;
+  background-color: var(--white);
+  border-radius: functions.size(xl);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  padding: functions.size(s) functions.size(l);
+}
+
+.active {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.disabled {
+  background-color: var(--stroke);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+.icon {
+  color: var(--accent);
+  display: flex;
+  margin-left: functions.size(s);
+
+  .disabled &,
+  .active & {
+    color: var(--white);
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: functions.size(s);
+}

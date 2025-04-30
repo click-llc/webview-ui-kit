@@ -1,0 +1,9 @@
+.secondaryButton {
+  background-color: var(--grey1288);
+  color: var(--font-primary);
+  min-width: 156px;
+
+  &[disabled] {
+    background-color: var(--disabled);
+  }
+}

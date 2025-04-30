@@ -1,0 +1,95 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+$wrapper: wrapper;
+$input: input;
+$icon: icon;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+
+  &.error:not(.disabled) {
+    & .#{$wrapper} {
+      border-color: var(--danger);
+    }
+  }
+
+  &.disabled {
+    color: var(--grey80);
+
+    & .#{$input} {
+      color: var(--grey80);
+      cursor: not-allowed;
+    }
+
+    & .#{$icon} {
+      color: var(--grey80);
+    }
+  }
+}
+
+.label {
+  @include mixins.typography('body2');
+
+  display: inline-block;
+}
+
+.#{$wrapper} {
+  align-items: center;
+  background-color: var(--island-and-input);
+  border-radius: functions.size(s);
+  border: 1px solid var(--stroke);
+  display: flex;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus-within {
+    border-color: var(--accent);
+  }
+
+  &IsTransparent {
+    background-color: transparent;
+  }
+}
+
+.#{$input} {
+  @include mixins.typography('body1');
+
+  background-color: transparent;
+  border-radius: inherit;
+  border: none;
+  color: var(--font-primary);
+  flex: 1;
+  line-height: 42px;
+  outline: none;
+  padding: 0 functions.size(l);
+
+  &::placeholder {
+    color: var(--grey72);
+  }
+}
+
+.helperText {
+  @include mixins.typography('body2');
+
+  color: var(--danger);
+  display: inline-block;
+}
+
+.#{$icon} {
+  color: var(--accent);
+  align-items: center;
+  display: inline-flex;
+  gap: functions.size(xxl);
+  padding: 9px 9px 9px 0;
+}
+
+.prefix,
+.suffix {
+  @include mixins.typography('body1', 'semibold');
+
+  color: var(--accent);
+  padding: 9px 9px 9px 0;
+  text-transform: uppercase;
+}

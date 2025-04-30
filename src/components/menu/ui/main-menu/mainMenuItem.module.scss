@@ -1,0 +1,34 @@
+@use '@sass/mixins';
+
+.wrapper {
+  color: var(--font-secondary);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  gap: 6px;
+  min-height: 64px;
+  min-width: 56px;
+  padding: 0;
+}
+
+.icon {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.label {
+  @include mixins.typography('footer');
+}
+
+.disabled {
+  color: var(--disabled-text);
+  cursor: unset;
+}
+
+.active {
+  color: var(--accent);
+}

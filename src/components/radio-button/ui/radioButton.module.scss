@@ -1,0 +1,71 @@
+@use '@sass/mixins';
+
+$border-radius: var(--rounding-border-radius, 50%);
+$border-color: var(--font-secondary);
+$size: calc(var(--radio-btn-size, 24px) - 4px);
+
+.label {
+  align-items: center;
+  column-gap: 12px;
+  cursor: pointer;
+  display: inline-flex;
+
+  &-right {
+    flex-direction: row-reverse;
+  }
+}
+
+.text {
+  @include mixins.typography('body2');
+}
+
+.input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.radio {
+  place-items: center center;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  color: var(--bg);
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  height: $size;
+  justify-content: center;
+  width: $size;
+
+  span {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border-radius: $border-radius;
+  }
+}
+
+.active {
+  border-color: var(--accent);
+
+  span {
+    background-color: var(--accent);
+  }
+}
+
+.disabled {
+  border-color: var(--stroke);
+
+  &:not(.active) {
+    span {
+      background-color: transparent;
+    }
+  }
+
+  &:is(.active) {
+    span {
+      background-color: var(--stroke);
+    }
+  }
+}

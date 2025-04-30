@@ -1,0 +1,81 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.base {
+  align-items: center;
+  background-color: var(--island-and-input, #fff);
+  border-radius: functions.size(l);
+  border: none;
+  column-gap: functions.size(m);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: functions.size(l);
+  position: relative;
+  width: 100%;
+
+  &[disabled] {
+    cursor: unset;
+  }
+
+  &Small {
+    padding: functions.size(m);
+  }
+
+  &Icon {
+    align-items: center;
+    display: flex;
+    line-height: 0;
+    min-height: 48px;
+  }
+
+  &Actions {
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    gap: functions.size(xs);
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  &Title {
+    @include mixins.typography('body1', 'semibold');
+    @include mixins.line-clamp(2);
+
+    color: var(--font-primary, #141414);
+    text-align: left;
+  }
+
+  &NormalWeight {
+    font-weight: 400;
+  }
+
+  &Description {
+    @include mixins.line-clamp(2);
+    @include mixins.typography('body2');
+
+    color: var(--font-secondary, #76787a);
+    text-align: left;
+  }
+}
+
+.content {
+  align-items: center;
+  column-gap: functions.size(m);
+  display: flex;
+}
+
+.overlay {
+  background: var(--overlay-maintaince);
+  border-radius: functions.size(l);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

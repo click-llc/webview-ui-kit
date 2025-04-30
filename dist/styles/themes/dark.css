@@ -1,0 +1,25 @@
+[data-theme='dark'] {
+  --accent: #07f;
+  --font-primary: #fff;
+  --font-secondary: #9da0a3;
+  --bg: #141414;
+  --bg-island: #272829;
+  --bg-disabled: var(--grey80);
+  --danger: #f20;
+  --island-and-input: #272829;
+  --stroke: #4f5052;
+  --disabled: #3b3c3d;
+  --disabled-text: #fff;
+  --default-white-color: #fff;
+  --waiting-text-color: #fca523;
+  --accent-blue: #07f;
+  --green-success-color: #00cc52;
+  --strokeRgba: inherit;
+  --overlay-maintaince: rgb(0 0 0 / 60%);
+  --border-radius: 8px;
+  --modal-padding: 20px;
+  --positive-bg: #00b849;
+  --neutral-bg: #898c8f;
+  --attention-bg: #ff8800;
+  --negative-bg: #ff4400;
+}

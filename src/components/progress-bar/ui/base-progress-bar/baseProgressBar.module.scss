@@ -1,0 +1,42 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.progressBar {
+  border-radius: functions.size(s);
+  margin-bottom: functions.size(s);
+  padding: functions.size(s);
+
+  &Header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: functions.size(s);
+  }
+
+  &Title {
+    @include mixins.typography('body2', 'semibold');
+
+    color: var(--font-primary);
+    margin: 0;
+  }
+
+  &Value {
+    @include mixins.typography('body2');
+
+    color: var(--font-secondary);
+  }
+
+  &Track {
+    background: var(--stroke);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+  }
+
+  &Fill {
+    background: var(--accent);
+    border-radius: 4px;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+}

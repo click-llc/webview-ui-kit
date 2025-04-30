@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'typography' as *;
+
+@mixin typography($type, $weight: 'regular') {
+  $font: map.get($font-sizes, $type);
+  $font-size: map.get($font, size);
+  $line-height: map.get($font, height);
+  $font-weight: map.get($font-weights, $weight);
+
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin background-blur {
+  backdrop-filter: blur(2px);
+  background-color: color-mix(in srgb, var(--default-white-color) 25%, transparent);
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

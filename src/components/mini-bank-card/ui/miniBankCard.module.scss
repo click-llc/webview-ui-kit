@@ -1,0 +1,56 @@
+@use '@sass/mixins';
+
+%card {
+  border-radius: var(--gander-border-radius, 8px);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 64px;
+  min-height: 34px;
+  min-width: 64px;
+  padding: 8px;
+}
+
+.card {
+  @extend %card;
+}
+
+.bankLogo {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardNum {
+  @include mixins.typography('body2', 'semibold');
+
+  align-items: center;
+  display: flex;
+
+  &::before {
+    background-color: var(--white);
+    border-radius: 50%;
+    content: '';
+    height: 4px;
+    margin: 2px 2px 0 0;
+    width: 4px;
+  }
+}
+
+.disabled {
+  background-color: var(--bg-disabled);
+}
+
+.cardSolo {
+  @extend %card;
+
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}

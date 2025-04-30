@@ -1,0 +1,165 @@
+@use 'sass:math';
+@use '@sass/functions';
+@use '@sass/mixins';
+
+$offset: 187;
+$duration: 1.4s;
+
+.loader {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  padding: 10px;
+
+  &Hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  > svg {
+    animation: rotator $duration linear infinite;
+
+    > circle {
+      animation:
+        dash $duration ease-in-out infinite,
+        colors ($duration * 4) ease-in-out infinite;
+      stroke-dasharray: $offset;
+      stroke-dashoffset: 0;
+      transform-origin: center;
+    }
+  }
+}
+
+.helperText {
+  @include mixins.typography('body2');
+
+  color: var(--danger);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.pinField {
+  display: inline-block;
+}
+
+.wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.pins {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: functions.size(s);
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 28px;
+
+  &Error {
+    animation: shakeEffect 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.pin {
+  @include mixins.typography('head1');
+
+  align-items: center;
+  color: var(--accent);
+  display: inline-flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+
+  &Plag {
+    background-color: var(--island-and-input);
+    border-radius: 40%;
+    height: functions.size(l);
+    transform: rotate(45deg);
+    width: functions.size(l);
+  }
+
+  &Error {
+    color: var(--danger);
+  }
+}
+
+.filled {
+  background-color: var(--accent);
+}
+
+.visible {
+  width: functions.size(l);
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 0;
+  transform: rotate(0);
+}
+
+.error {
+  background-color: var(--danger);
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: var(--accent);
+  }
+
+  100% {
+    stroke: var(--accent);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+
+  50% {
+    stroke-dashoffset: math.div($offset, 4);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes shakeEffect {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}

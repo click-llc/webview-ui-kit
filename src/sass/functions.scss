@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+$size-step: var(--app-size-step, 4px);
+
+@function size($size) {
+  $sizes: (
+    xs: 1,
+    s: 2,
+    m: 3,
+    l: 4,
+    xl: 5,
+    xxl: 6,
+  );
+
+  @if map.has-key($sizes, $size) {
+    @return calc(#{map.get($sizes, $size)} * var(--app-size-step, 4px));
+  } @else {
+    @error "Incorrect size: #{$size}. Use: xs, s, m, l, xl, xxl.";
+  }
+}

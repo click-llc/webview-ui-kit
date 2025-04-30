@@ -1,0 +1,40 @@
+@use '@sass/mixins';
+
+.counter {
+  align-items: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--default-white-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+
+  // Counter sizes
+  &[data-size='lg'] {
+    @include mixins.typography('body2', 'semibold');
+
+    padding-inline: 7px;
+  }
+
+  &[data-size='md'] {
+    @include mixins.typography('menu', 'semibold');
+
+    padding-inline: 5px;
+  }
+
+  &[data-size='sm'] {
+    @include mixins.typography('tiny', 'semibold');
+
+    padding-inline: 4px;
+  }
+
+  // Counter colors
+  &[data-color='accent'] {
+    background-color: var(--accent);
+  }
+
+  &[data-color='secondary'] {
+    background-color: var(--grey1288);
+  }
+}

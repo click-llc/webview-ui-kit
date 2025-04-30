@@ -1,0 +1,43 @@
+$font-sizes: (
+  'balance': (
+    size: 28px,
+    height: 44px,
+  ),
+  'body1': (
+    size: 17px,
+    height: 22px,
+  ),
+  'body2': (
+    size: 14px,
+    height: 18px,
+  ),
+  'footer': (
+    size: 11px,
+    height: 14px,
+  ),
+  'head1': (
+    size: 28px,
+    height: 36px,
+  ),
+  'head2': (
+    size: 22.5px,
+    height: 28px,
+  ),
+  'history': (
+    size: 15.5px,
+    height: 20px,
+  ),
+  'menu': (
+    size: 12.5px,
+    height: 16px,
+  ),
+  'tiny': (
+    size: 9px,
+    height: 12px,
+  ),
+);
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+);

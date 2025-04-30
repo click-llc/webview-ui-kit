@@ -1,0 +1,82 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.balance {
+  @include mixins.typography('body2');
+
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &Span {
+    margin-left: functions.size(xs);
+  }
+}
+
+.strong {
+  font-weight: 600;
+
+  & .span {
+    font-weight: 400;
+  }
+}
+
+.s {
+  @include mixins.typography('body1');
+
+  & .strong {
+    & .span {
+      @include mixins.typography('body2');
+    }
+  }
+
+  & .balanceSpan {
+    @include mixins.typography('body2');
+  }
+}
+
+.m {
+  font-weight: 600;
+  font-size: 19.5px;
+  line-height: 26px;
+
+  & .strong {
+    & .span {
+      @include mixins.typography('body1');
+    }
+  }
+
+  & .balanceSpan {
+    @include mixins.typography('body1');
+  }
+}
+
+.x {
+  @include mixins.typography('head1');
+
+  & .strong {
+    & .span {
+      @include mixins.typography('head2');
+    }
+  }
+
+  & .balanceSpan {
+    @include mixins.typography('head2');
+  }
+}
+
+.xl {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+
+  & .strong {
+    & .span {
+      @include mixins.typography('head1');
+    }
+  }
+
+  & .balanceSpan {
+    @include mixins.typography('head1');
+  }
+}

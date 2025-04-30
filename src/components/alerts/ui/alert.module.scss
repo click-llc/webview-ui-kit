@@ -1,0 +1,41 @@
+@use '@sass/functions';
+@use '@sass/mixins';
+
+.alert {
+  background-color: var(--bg-island);
+  border-radius: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 32px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.title {
+  @include mixins.typography('body1', 'semibold');
+
+  color: var(--font-primary);
+  text-align: center;
+}
+
+.description {
+  @include mixins.typography('body2');
+
+  color: var(--font-secondary);
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
