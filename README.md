@@ -121,12 +121,6 @@ Please read our CODE_OF_CONDUCT.md before contributing.
 
 ---
 
-## Design
-
-Figma design file: Click UI Kit on Figma README.md](file-service://file-WfdA65s2xjNNJpKwmoHmak).
-
----
-
 ## License
 
 MIT License
